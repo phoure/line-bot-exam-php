@@ -18,7 +18,12 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			//$text = $event['source']['userId'];
 			// Get replyToken
-			$text = 'สวัสดี';
+			if (strpos($event['message']['text'], 'โรโบอป') !== false) {
+				$text = 'หวัดเด่ เลียกเลาเล่อ';
+			} else {
+				exit();
+			}
+			
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
