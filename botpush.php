@@ -21,7 +21,7 @@ echo $response->getHTTPStatus() . ' ' . $response->getRawBody().'<br />';
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
-$response = $bot->getMessageContent('7989283138027');
+$response = $bot->getMessageContent('7989530815608');
 
 
 
