@@ -20,7 +20,7 @@ echo $response->getHTTPStatus() . ' ' . $response->getRawBody().'<br />';
 
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$response = $bot->getMessageContent($GET['id']);
+$response = $bot->getMessageContent('7989586827698');
 
 
 
