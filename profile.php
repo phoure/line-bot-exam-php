@@ -20,7 +20,6 @@ echo 'ddd';
 print_r ($result);
 */
 
-<?php
 
 $curl = curl_init();
 
