@@ -46,7 +46,7 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  echo '<img src="'.$response.'" />;
+  echo '<img src="'.$response.'" />';
 }
 
 ?>
