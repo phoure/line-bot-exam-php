@@ -55,18 +55,16 @@ echo '<img src="data:image/jpeg;base64,'.base64_encode( $response ).'"/>';
  </audio>';
     */
  
-// requires php5
-	define('UPLOAD_DIR', '');
-	$img = $response;
-	$img = str_replace('data:image/jpeg;base64,', '', $img);
-	$img = str_replace(' ', '+', $img);
-	$data = base64_decode($img);
-	$file = UPLOAD_DIR . uniqid() . '.jpeg';
-	$success = file_put_contents($file, $data);
-	print $success ? $file : 'Unable to save the file.';
+$data = 'data:image/jpeg;base64,'.base64_encode( $response );
+
+list($type, $data) = explode(';', $data);
+list(, $data)      = explode(',', $data);
+$data = base64_decode($data);
+
+file_put_contents('aaa.jpeg', $data);
     
     
 }
 
 ?>
-
+ddd
