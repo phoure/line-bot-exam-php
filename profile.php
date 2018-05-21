@@ -48,12 +48,12 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
     
-// echo '<img src="base64,'.base64_encode( $response ).'"/>';
-
+echo '<img src="data:image/jpeg;base64,'.base64_encode( $response ).'"/>';
+/*
     echo '<audio controls preload="none" style="width:480px;">
  <source src="data:audio/x-m4a;base64,'.base64_encode( $response ).'" type="audio/mp4" />
  </audio>';
-    
+    */
  
  $data = 'data:image/jpeg;base64,'.base64_encode( $response );
 
