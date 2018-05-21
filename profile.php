@@ -17,7 +17,7 @@ curl_close($ch);
 
     $tempfile = tmpfile();
     fwrite($tempfile, $result);
-echo $tempfile;
+echo '<img src="'.$tempfile.'" />';
 
 
 /*
