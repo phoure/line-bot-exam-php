@@ -50,13 +50,15 @@ if ($err) {
     
 //echo '<img src="data:image/jpeg;base64,'.base64_encode( $response ).'"/>';
 
-    echo '<audio controls preload="none" style="width:480px;">
+  /*  echo '<audio controls preload="none" style="width:480px;">
  <source src="data:audio/x-m4a;base64,'.base64_encode( $response ).'" type="audio/mp4" />
  </audio>';
-  
-
+  */
+  echo '<video width="320" height="240" controls>
+  <source src="data:audio/x-m4a;base64,'.base64_encode( $response ).'" type="video/mp4">
+</video>';
     
 }
 
 ?>
-ddd
+dddำำ
