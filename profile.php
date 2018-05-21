@@ -25,7 +25,7 @@ fclose($tempfile);
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.line.me/v2/bot/message/7991151249878/content",
+  CURLOPT_URL => "https://api.line.me/v2/bot/message/7991389661476/content",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -54,12 +54,16 @@ if ($err) {
  <source src="data:audio/x-m4a;base64,'.base64_encode( $response ).'" type="audio/mp4" />
  </audio>';
     
-  /*
-    $tempfile = tmpfile();
-    fwrite($tempfile, $response->getRawBody());
-    fread($tempfile,"10");
-    fclose($tempfile);
-    */
+ 
+ $data = 'data:image/jpeg;base64,'.base64_encode( $response );
+
+list($type, $data) = explode(';', $data);
+list(, $data)      = explode(',', $data);
+$data = base64_decode($data);
+
+file_put_contents('aaa.jpg', $data);
+    
+    
 }
 
 ?>
