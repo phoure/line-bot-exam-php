@@ -47,11 +47,15 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  
+    
+    echo '<img src="data:image/jpeg;base64,'.base64_encode( $response ).'"/>';
+    
+  /*
     $tempfile = tmpfile();
     fwrite($tempfile, $response->getRawBody());
     fread($tempfile,"10");
     fclose($tempfile);
+    */
 }
 
 ?>
