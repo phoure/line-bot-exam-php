@@ -1,6 +1,6 @@
 <?php
 
-
+/*
 $access_token = 'MaNINLONsNr6WVQXl5lw1qHUUEstWHC45HctvmJB0+EghI4B0z9cJfC3BUrsWGrHxB9nEFqGV7B3rrNr14cQjMh1LzeKooYfaxqwmwsCJQFTfXyJrUnsR/mVKm/pKpWWYo9zsijkiWqOjleKvfJRIwdB04t89/1O/w1cDnyilFU=';
 $channelSecret = '67661a587eff07930c006c7b4c1c0b10';
 
@@ -19,9 +19,9 @@ curl_close($ch);
     fwrite($tempfile, $result);
 fread($tempfile,"10");
 fclose($tempfile);
+*/
 
 
-/*
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -48,9 +48,11 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
   
-  $tempfile = tmpfile();
+    $tempfile = tmpfile();
     fwrite($tempfile, $response->getRawBody());
+    fread($tempfile,"10");
+    fclose($tempfile);
 }
-*/
+
 ?>
 
