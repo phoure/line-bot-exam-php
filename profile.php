@@ -54,15 +54,7 @@ if ($err) {
  <source src="data:audio/x-m4a;base64,'.base64_encode( $response ).'" type="audio/mp4" />
  </audio>';
   
- 
-$data = 'data:image/jpeg;base64,'.base64_encode( $response );
 
-list($type, $data) = explode(';', $data);
-list(, $data)      = explode(',', $data);
-$data = base64_decode($data);
-
-file_put_contents('aaa.jpeg', $data);
-    
     
 }
 
