@@ -25,7 +25,7 @@ fclose($tempfile);
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.line.me/v2/bot/message/7989650169837/content",
+  CURLOPT_URL => "https://api.line.me/v2/bot/message/7991151249878/content",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -48,8 +48,12 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
     
-    echo '<img src="data:image/jpeg;base64,'.base64_encode( $response ).'"/>';
-    
+ echo '<img src="base64,'.base64_encode( $response ).'"/>';
+    // echo '<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>';
   /*
     $tempfile = tmpfile();
     fwrite($tempfile, $response->getRawBody());
