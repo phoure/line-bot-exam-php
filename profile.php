@@ -48,8 +48,12 @@ if ($err) {
   echo "cURL Error #:" . $err;
 } else {
     
- echo '<img src="base64,'.base64_encode( $response ).'"/>';
+// echo '<img src="base64,'.base64_encode( $response ).'"/>';
 
+    echo '<audio controls preload="none" style="width:480px;">
+ <source src="data:audio/x-m4a;base64,'.base64_encode( $response ).'" type="audio/mp4" />
+ </audio>';
+    
   /*
     $tempfile = tmpfile();
     fwrite($tempfile, $response->getRawBody());
