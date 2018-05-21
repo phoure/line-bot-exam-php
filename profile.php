@@ -4,7 +4,7 @@ $access_token = 'MaNINLONsNr6WVQXl5lw1qHUUEstWHC45HctvmJB0+EghI4B0z9cJfC3BUrsWGr
 $channelSecret = '67661a587eff07930c006c7b4c1c0b10';
 
 /*
-$url = 'https://api.line.me/v2/bot/message/7989650169837/content';
+$url = 'https://api.line.me/v2/bot/message/7991151249878/content';
 
 $headers = array('Authorization: Bearer ' . $access_token);
 
