@@ -46,7 +46,9 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  echo '<img src="'.$response.'" />';
+  
+  $tempfile = tmpfile();
+    fwrite($tempfile, $response->getRawBody());
 }
 
 ?>
